@@ -1,0 +1,151 @@
+
+/* Common styling rules - all resolutions */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Tackle the small screen version first, in the "expanded" state. */
+/* rules for narrow screens */
+@media (width <= 799px) {
+
+/* Style the navigation menu */
+nav {
+    overflow: hidden;
+    background-color: #a51c30;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 32px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+}
+
+  /* Hide the links inside the navigation menu (except for logo/home) */
+#menu-toggle {
+    display: none;
+}
+
+  /* Style navigation menu links */
+#page-nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+  
+  /* Style the hamburger menu */
+#page-nav a.icon {
+    background-image: url(../images/x-menu.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+  
+  /* Add a grey background color on mouse-over */
+#page-nav a:hover {
+    background-color: salmon;
+    color: white;
+  }
+ 
+    /* Commenting this out to try to get the toggle working
+header nav ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+header nav ul li {
+    padding: 0.5rem 1rem;
+}
+
+header nav {
+    background-color: #a51c30;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+}
+
+header nav ul li a:hover {
+    background-color: salmon;
+    padding: 0.5rem 1.2rem;
+}
+
+#menu-toggle {
+    background-image: url(../images/x-menu.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+#menu-toggle.collapsed {
+    background-image: url(../images/pancake-menu.svg);
+    display: none;
+}
+*/
+
+/* Then, tackle the "hidden" version of the menu
+[You could do either the expanded or hidden versions first] */
+
+}
+/* After the small screen, then tackle the wide screen version. */
+
+/* Wide Screen Styles */
+@media screen and (min-width: 800px) {
+
+    #menu-toggle {
+        width: 0;
+        height: 0;
+    }
+
+    header nav {
+        background-color: #a51c30;
+        height: 3rem;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        padding-top: 0;
+    }
+    
+    header nav ul li {
+        display: inline-grid;
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    header nav ul li a:hover {
+        background-color: salmon;
+        text-align: center;
+        padding: 1rem;
+    }
+
+}
